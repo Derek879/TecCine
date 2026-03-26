@@ -392,13 +392,20 @@ export default function MovieDetail() {
                 </div>
 
                 <div className="reservar-wrap">
-                  <Link to={user ? '/checkout' : '/login'} className="btn-reservar">
-                    {user
-                      ? horarioSeleccionado
-                        ? `Reservar para las ${horarioSeleccionado} →`
-                        : 'Selecciona un horario →'
-                      : 'Inicia sesión para comprar →'}
-                  </Link>
+<Link
+  to={
+    user
+      ? `/checkout/${pelicula.id}?horario=${horarioSeleccionado}`
+      : '/login'
+  }
+  className="btn-reservar"
+>
+  {user
+    ? horarioSeleccionado
+      ? `Reservar para las ${horarioSeleccionado} →`
+      : 'Selecciona un horario →'
+    : 'Inicia sesión para comprar →'}
+</Link>
                 </div>
               </motion.div>
             </motion.div>

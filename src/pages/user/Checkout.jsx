@@ -13,7 +13,7 @@ const PELICULAS = [
   { id: 6, titulo: 'Misión Imposible 8', precio: 19.90, imagen: 'https://picsum.photos/seed/mi6/300/450' },
 ]
 
-const FILAS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+const FILAS = ['A', 'B', 'C', 'D', 'E', 'F',   'G', 'H']
 const COLS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 const OCUPADOS = ['A3', 'A4', 'B7', 'C1', 'C2', 'D5', 'E3', 'E8', 'F2', 'F6', 'G4', 'G9', 'H1', 'H11']
 
