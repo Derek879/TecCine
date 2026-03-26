@@ -1,0 +1,254 @@
+.admin-page { padding: 2.5rem 4rem; background: #0a0a0a; min-height: 100vh; }
+
+/* HEADER */
+.admin-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 2.5rem;
+  flex-wrap: wrap; gap: 1rem;
+}
+.admin-header h1 { font-size: 1.9rem; font-weight: 800; margin-top: 0.3rem; }
+.admin-sub { color: #555; margin-top: 0.3rem; font-size: 0.9rem; }
+.back-link { color: #e50914; font-size: 0.82rem; display: block; margin-bottom: 0.3rem; }
+.back-link:hover { text-decoration: underline; }
+
+/* BOTÓN NUEVO */
+.btn-nuevo {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #e50914, #b0070f);
+  color: white; border: none; border-radius: 10px;
+  font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 15px rgba(229,9,20,0.4);
+  white-space: nowrap;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.2rem; margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-radius: 14px; padding: 1.4rem;
+  display: flex; gap: 1rem; align-items: center;
+  transition: all 0.3s;
+}
+
+.stat-icono {
+  width: 52px; height: 52px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; flex-shrink: 0;
+}
+
+.stat-valor { font-size: 1.7rem; font-weight: 900; margin-bottom: 0.2rem; }
+.stat-label { font-size: 0.78rem; color: #555; }
+
+/* SECCIÓN */
+.section-title {
+  font-size: 1.15rem; font-weight: 700;
+  margin-bottom: 1rem; color: #ccc;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+
+/* ACCESOS RÁPIDOS */
+.accesos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin-bottom: 2.5rem;
+}
+
+.acceso-card {
+  background: #0d0d0d;
+  border: 1px solid #1e1e1e;
+  border-radius: 12px; padding: 1.2rem 1.5rem;
+  display: flex; align-items: center; gap: 0.8rem;
+  transition: all 0.2s; text-decoration: none;
+}
+
+.acceso-icono {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+
+.acceso-label { flex: 1; font-size: 0.88rem; font-weight: 600; color: #ccc; }
+.acceso-arrow { font-size: 1.1rem; font-weight: 700; }
+
+/* TABLA */
+.admin-section { margin-bottom: 2rem; }
+
+.tabla-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #1a1a1a;
+}
+
+.admin-tabla { width: 100%; border-collapse: collapse; }
+
+.admin-tabla th {
+  background: #0d0d0d; padding: 1rem 1.2rem;
+  text-align: left; font-size: 0.78rem;
+  color: #555; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.admin-tabla td {
+  padding: 1rem 1.2rem; font-size: 0.9rem;
+  border-bottom: 1px solid #111;
+  background: #080808;
+  transition: background 0.2s;
+}
+.admin-tabla tr:last-child td { border-bottom: none; }
+.admin-tabla tr:hover td { background: #111; }
+
+/* PILLS Y BADGES */
+.asiento-tag {
+  background: #1a1a1a; border: 1px solid #2a2a2a;
+  padding: 0.2rem 0.7rem; border-radius: 6px;
+  font-size: 0.8rem; color: #888; font-family: monospace;
+}
+
+.total-verde { color: #10b981; font-weight: 700; font-size: 0.95rem; }
+.precio-verde { color: #10b981; font-weight: 700; }
+
+.genero-pill {
+  background: #1a0a2a; border: 1px solid #3a1a5a;
+  color: #c084fc; padding: 0.2rem 0.7rem;
+  border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+}
+
+.estado-badge {
+  font-size: 0.8rem; padding: 0.3rem 0.9rem;
+  border-radius: 20px; font-weight: 600;
+  display: inline-block;
+}
+.estado-badge.activa { background: #052e16; color: #4ade80; border: 1px solid #166534; }
+.estado-badge.inactiva { background: #1a1a1a; color: #555; border: 1px solid #2a2a2a; }
+
+.rol-badge {
+  font-size: 0.75rem; padding: 0.2rem 0.7rem;
+  border-radius: 20px; font-weight: 600;
+}
+.rol-badge.admin { background: #1e1b4b; color: #818cf8; border: 1px solid #3730a3; }
+.rol-badge.user { background: #051a2a; color: #60a5fa; border: 1px solid #1d4ed8; }
+
+/* ACCIONES */
+.acciones { display: flex; gap: 0.5rem; }
+
+.btn-editar {
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  border: 1px solid #3b82f6; color: #3b82f6;
+  border-radius: 8px; font-size: 0.8rem; cursor: pointer;
+  transition: all 0.2s; font-weight: 600;
+}
+
+.btn-eliminar {
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  border: 1px solid #e50914; color: #e50914;
+  border-radius: 8px; font-size: 0.8rem; cursor: pointer;
+  transition: all 0.2s; font-weight: 600;
+}
+
+/* FORMULARIO */
+.form-card {
+  background: #0d0d0d;
+  border: 1px solid #e50914;
+  border-radius: 14px; padding: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(229,9,20,0.1);
+}
+.form-card h3 { font-size: 1.1rem; margin-bottom: 1.2rem; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; margin-bottom: 1.2rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-size: 0.8rem; color: #666; }
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem 1rem; background: #141414;
+  border: 1px solid #222; border-radius: 8px;
+  color: white; font-size: 0.9rem; outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus { border-color: #e50914; }
+.form-group select option { background: #141414; }
+
+.form-botones { display: flex; gap: 1rem; justify-content: flex-end; }
+
+.btn-cancelar {
+  padding: 0.65rem 1.5rem; background: transparent;
+  border: 1px solid #333; color: #888;
+  border-radius: 8px; cursor: pointer;
+  transition: all 0.2s; font-size: 0.9rem;
+}
+.btn-cancelar:hover { border-color: #666; color: white; }
+
+.btn-guardar {
+  padding: 0.65rem 1.8rem;
+  background: linear-gradient(135deg, #e50914, #b0070f);
+  color: white; border: none; border-radius: 8px;
+  font-weight: 700; cursor: pointer; font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(229,9,20,0.3);
+}
+
+/* USUARIOS EN CARDS */
+.usuarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.2rem;
+}
+
+.usuario-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 14px; padding: 1.5rem;
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: all 0.2s;
+}
+
+.usuario-avatar {
+  width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; font-weight: 800; flex-shrink: 0;
+}
+
+.usuario-info { flex: 1; }
+.usuario-info h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+.usuario-info > p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+
+.usuario-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+
+.compras-badge {
+  font-size: 0.75rem; padding: 0.2rem 0.7rem;
+  border-radius: 20px; font-weight: 600;
+  background: #1a1205; color: #f59e0b;
+  border: 1px solid #92400e;
+}
+
+.usuario-fecha { font-size: 0.75rem; color: #444; }
+
+.usuario-acciones {
+  display: flex; flex-direction: column;
+  gap: 0.5rem; flex-shrink: 0;
+}
+
+/* BUSCADOR */
+.buscador-admin {
+  padding: 0.65rem 1.2rem; background: #111;
+  border: 1px solid #222; border-radius: 25px;
+  color: white; font-size: 0.88rem; width: 220px;
+  outline: none; transition: border-color 0.2s;
+}
+.buscador-admin:focus { border-color: #e50914; }
