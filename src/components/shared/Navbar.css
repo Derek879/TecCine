@@ -1,0 +1,236 @@
+/* CONTENEDOR GENERAL */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 15, 26, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* LÍNEA SUPERIOR DECORATIVA */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(56, 189, 248, 0.35),
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* CONTENIDO */
+.navbar-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  min-height: 74px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* LOGO */
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo-icon {
+  font-size: 1.15rem;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+}
+
+.navbar-logo-text {
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-logo:hover .navbar-logo-text {
+  color: #67d3ff;
+  transform: translateY(-1px);
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.nav-link {
+  position: relative;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #e2e8f0;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  transition: width 0.22s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #f8fafc;
+}
+
+/* BLOQUES DERECHA */
+.navbar-auth,
+.navbar-user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+/* USER */
+.navbar-user {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* BOTÓN LOGOUT */
+.btn-logout {
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.65);
+  color: #38bdf8;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.22s ease;
+}
+
+.btn-logout:hover {
+  background: #38bdf8;
+  color: #0b0f1a;
+  box-shadow: 0 10px 24px rgba(56, 189, 248, 0.22);
+  transform: translateY(-1px);
+}
+
+/* BOTÓN REGISTER */
+.btn-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white !important;
+  padding: 0.62rem 1.15rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.18);
+  transition: all 0.22s ease;
+}
+
+.btn-register:hover {
+  background: linear-gradient(135deg, #f43f5e, #dc2626);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(239, 68, 68, 0.24);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .navbar-content {
+    padding: 0.95rem 1.2rem;
+  }
+
+  .navbar-logo-text {
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+  }
+
+  .navbar-links {
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .navbar-user {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+    min-height: auto;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar-auth,
+  .navbar-user-box {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-content {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .navbar-logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-link {
+    font-size: 0.88rem;
+  }
+
+  .btn-register,
+  .btn-logout {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
