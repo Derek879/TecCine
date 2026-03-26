@@ -1,0 +1,62 @@
+.salas-resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem; margin-bottom: 2rem;
+}
+
+.sala-mini-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px; padding: 1rem;
+  display: flex; gap: 0.8rem; align-items: center;
+  cursor: default; transition: all 0.2s;
+}
+.sala-mini-icono { font-size: 1.5rem; }
+.sala-mini-nombre { font-size: 0.85rem; font-weight: 700; color: #ccc; }
+.sala-mini-funciones { font-size: 0.75rem; color: #555; margin-top: 0.1rem; }
+
+.funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.funcion-card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 14px; padding: 1.5rem;
+  transition: all 0.2s;
+}
+.funcion-card.inactiva { opacity: 0.6; }
+
+.funcion-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 1rem; gap: 1rem;
+}
+.funcion-titulo { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+.funcion-meta { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.funcion-sala { font-size: 0.78rem; color: #888; }
+.funcion-fecha { font-size: 0.78rem; color: #888; }
+
+.funcion-horarios {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+.horario-chip {
+  background: #141414; border: 1px solid #222;
+  padding: 0.25rem 0.7rem; border-radius: 20px;
+  font-size: 0.78rem; color: #aaa;
+}
+
+.funcion-ocupacion { margin-bottom: 1.2rem; }
+.ocupacion-header {
+  display: flex; justify-content: space-between;
+  font-size: 0.8rem; color: #666; margin-bottom: 0.4rem;
+}
+.ocupacion-barra-wrap {
+  height: 6px; background: #1a1a1a;
+  border-radius: 4px; overflow: hidden;
+}
+.ocupacion-barra { height: 100%; border-radius: 4px; }
+
+.funcion-acciones { display: flex; gap: 0.5rem; }
