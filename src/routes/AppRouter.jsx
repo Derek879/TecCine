@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "../context/AuthContext";
 import PrivateRoute from "./PrivateRoute";
 
@@ -21,7 +21,7 @@ import Footer from "../components/shared/Footer";
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Navbar />
 
@@ -101,6 +101,6 @@ export default function AppRouter() {
 
         <Footer />
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
